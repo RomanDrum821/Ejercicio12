@@ -9,8 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './calculadora.component.css',
 })
 export class CalculadoraComponent {
-  numero1: number = 2;
-  numero2: number = 5;
+  numero1: number = 0;
+  numero2: number = 0;
   resultado: number = 0;
 
   sumarNumeros() {
@@ -32,5 +32,11 @@ export class CalculadoraComponent {
     if (this.numero2 == 0) alert('No se puede realizar la division');
     else this.resultado = this.numero1 / this.numero2;
     //alert('Dividir numeros');
+  }
+
+  iniciarCampos() {
+    this.numero1 = 0;
+    this.numero2 = 0;
+    this.resultado = 0;
   }
 }
